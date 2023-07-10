@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Formulário</title>
+
+    <script>
+        const Submissao = (event) => {
+            event.preventDefault()
+            const name = document.querySelector('input#idnome').value
+            const email = document.querySelector('input#idemail').value
+        
+            fetch('https://api.sheetmonkey.io/form/8amCzMES18qJmVA42ehecP', {
+                method: 'post',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name: name, email: email }),
+            })
+        
+        }
+        
+        document.querySelector('form').addEventListener('submit', Submissao)
+    </script>
+
+</head>
+<body>
+    <form>
+        <h1>Bem-vindo</h1>
+
+        <div id="bloco_nome">
+            <p>Nome</p>
+            <input onclick="clicou()" type="text" name="nome" id="idnome">
+        </div>
+
+        <div id="bloco_email">
+            <p>E-mail</p>
+            <input onclick="clicou()" type="email" name="email" id="idemail">
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    
+</body>
+</html>

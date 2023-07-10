@@ -1,23 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'VT323', monospace;
+    color: white;
 }
 
 body {
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: rgb(185, 226, 228);
+}
+
+body h1 {
+    margin-top: -30px;
+    font-size: 3em;
+}
+
+body p {
+    margin-top: 50px;
+    font-size: 1.4em;
+}
+
+.score {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.score p {
+    margin: 0;
+    
 }
 
 .board-game {
+    margin-top: 20px;
     height: 400px;
     width: 100%;
-    border: 1px solid black;
+
+    border-bottom: 20px solid rgb(63, 151, 63);
     position: relative;
     overflow: hidden;
+    background: linear-gradient(to top, rgb(243, 245, 246),rgb(98, 162, 185))
+
+    
+}
+
+
+
+.nuvem {
+    width: 400px;
+    position: absolute;
+    top: 50px;
+    animation: nuvem-animation 7s infinite linear;
 }
 
 .pipe {
@@ -25,17 +71,29 @@ body {
     bottom: 0;
     width: 80px;
     height: 100px;
-    /*animation: pipe_animation 2s infinite linear ;*/
+    animation: pipe_animation 1.2s infinite linear ;
+    
+}
+
+@keyframes nuvem-animation{
+
+    from {
+        left: 110%;
+    }
+
+    to {
+        left: -70%;
+    }
 }
 
 @keyframes pipe_animation {
 
     from {
-        margin-left: 110%;
+        left: 110%;
     }
 
     to {
-        margin-left: -20%;
+        left: -20%;
     }
 }
 
@@ -59,6 +117,10 @@ body {
    }
 
    60% {
+    bottom: 180px;
+   }
+
+   75% {
     bottom: 150px;
    }
 
@@ -66,3 +128,4 @@ body {
     bottom : 0;
    }
 }
+
