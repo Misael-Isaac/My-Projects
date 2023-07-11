@@ -13,6 +13,8 @@ let pontos = 0
 
 let c = true
 
+const msg = document.querySelector('.msg')
+
 
 
 const jump = () => {
@@ -58,6 +60,8 @@ const loop = setInterval(() => {
       mario.style.marginLeft = '50px'  
       
       c = false
+
+      msg.style.display = 'block'
    }
 
    console.log(c)
