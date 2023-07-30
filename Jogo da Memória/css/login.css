@@ -1,0 +1,58 @@
+
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 350px;
+    
+}
+
+form > img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+form > h1 {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+    color: #333;
+    min-width: 100%;
+    
+    text-align: center;
+}
+
+form > input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    outline: none;
+}
+
+form > button {
+    width: 100%;
+    font-size: 1.4em;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(236, 72, 72, 0.788);
+    cursor: pointer;
+}
+
+form > button:disabled {
+    background-color: rgb(223, 222, 222);
+    color: #7e7c7c;
+    cursor: auto;
+}
