@@ -1,0 +1,118 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(43, 114, 184);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.relogio {
+    min-height: 600px;
+    min-width: 600px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    position: relative;
+    border: 10px groove black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.numero {
+    position: absolute;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    
+}
+
+.numero-1 {
+    transform: rotate(30deg);
+}
+
+.numero-2 {
+    transform: rotate(60deg);
+}
+
+.numero-3 {
+    transform: rotate(90deg);
+}
+.numero-4 {
+    transform: rotate(120deg);
+}
+
+.numero-5 {
+    transform: rotate(150deg);
+}
+
+.numero-6 {
+    transform: rotate(180deg);
+}
+
+.numero-7 {
+    transform: rotate(210deg);
+}
+
+.numero-8 {
+    transform: rotate(240deg)
+}
+
+.numero-9 {
+    transform: rotate(270deg);
+}
+
+.numero-10 {
+    transform: rotate(300deg);
+}
+
+.numero-11 {
+    transform: rotate(330deg);
+}
+
+.ponteiro {
+    position: absolute;
+    transform: translate(0, -50%);
+    transform-origin: bottom;
+}
+
+.segundos {
+    height: 230px;
+    width: 5px;
+    border-radius: 5px;
+    background-color: red;
+}
+
+.minutos {
+    height: 200px;
+    width: 7px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.horas {
+    height: 180px;
+    width: 9px;
+    background-color: black;
+    border-radius: 7px;
+
+}
+
+.ponto {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: black;
+}
+
